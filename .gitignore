@@ -3,3 +3,8 @@
 *.DS_Store
 tmp/*
 lib/settings.yml
+.project
+.buildpath
+.settings
+.metadata
+.tmp_*
