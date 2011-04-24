@@ -28,6 +28,8 @@ a.button, button {
   font-weight:bold;
   color:#565656;
   cursor:pointer;
+  
+  border-radius: 5px;
 }
 button {
   width:auto;

@@ -1,0 +1,20 @@
+.error, .alert {
+	background: #fbe3e4 url('ico/cross.png') 12px 10px no-repeat;
+	color: #8a1f11;
+	border-color: #fbc2c4;
+}
+.notice     {
+	background: #fff6bf url('ico/lightbulb.png') 12px 10px no-repeat;
+	color: #514721;
+	border-color: #ffd324;
+}
+.success    {
+	background: #e6efc2 url('ico/accept.png') 12px 10px no-repeat;
+	color: #264409;
+	border-color: #c6d880;
+}
+.info {
+	background: #d5edf8 url('ico/exclamation.png') 12px 10px no-repeat;
+	color: #205791;
+	border-color: #92cae4;
+}

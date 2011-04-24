@@ -89,20 +89,21 @@ input[type=text], input[type=password], input.text, input.title, textarea {backg
 input[type=text]:focus, input[type=password]:focus, input.text:focus, input.title:focus, textarea:focus {border-color:#666;}
 select {background-color:#fff;border-width:1px;border-style:solid;}
 input[type=text], input[type=password], input.text, input.title, textarea, select {margin:0.5em 0;}
-input.text, input.title {width:300px;padding:5px;}
+input.text, input.title {width:160px;padding:5px;}
 input.title {font-size:1.5em;}
 textarea {width:390px;height:250px;padding:5px;}
 form.inline {line-height:3;}
 form.inline p {margin-bottom:0;}
 .error, .alert, .notice, .success, .info {padding:0.8em;margin-bottom:1em;border:2px solid #ddd;padding-left:40px;}
-.error, .alert {background:#fbe3e4 url('ico/cross.png') 12px 10px no-repeat;color:#8a1f11;border-color:#fbc2c4;}
-.notice {background:#fff6bf url('ico/lightbulb.png') 12px 10px no-repeat;color:#514721;border-color:#ffd324;}
-.success {background:#e6efc2 url('ico/accept.png') 12px 10px no-repeat;color:#264409;border-color:#c6d880;}
-.info {background:#d5edf8 url('ico/exclamation.png') 12px 10px no-repeat;color:#205791;border-color:#92cae4;}
+.error, .alert {background-color:#fbe3e4;color:#8a1f11;border-color:#fbc2c4;}
+.notice {background-color:#fff6bf;color:#514721;border-color:#ffd324;}
+.success {background-color:#e6efc2;color:#264409;border-color:#c6d880;}
+.info {background-color:#d5edf8;color:#205791;border-color:#92cae4;}
 .error a, .alert a {color:#8a1f11;}
 .notice a {color:#514721;}
 .success a {color:#264409;}
 .info a {color:#205791;}
+td.label {width:120px;}
 
 /* grid.css */
 .container {width:950px;margin:0 auto;}
