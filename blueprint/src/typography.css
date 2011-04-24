@@ -12,7 +12,7 @@ body {
   font-size: 75%;
   color: #222;
   background: #fff;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
 
@@ -24,7 +24,7 @@ h1,h2,h3,h4,h5,h6 { font-weight: normal; color: #111; }
 h1 { font-size: 3em; line-height: 1; margin-bottom: 0.5em; }
 h2 { font-size: 2em; margin-bottom: 0.75em; }
 h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
-h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
+h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; font-weight: bold; }
 h5 { font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
 h6 { font-size: 1em; font-weight: bold; }
 
@@ -99,6 +99,11 @@ th,td,caption { padding: 4px 10px 4px 5px; }
 tbody tr:nth-child(even) td, 
 tbody tr.even td  { 
 	background: #e5ecf9; 
+}
+
+table.form tbody tr:nth-child(even) td,
+table.form tbody tr.even td {
+	background: transparent; 
 }
 tfoot       { font-style: italic; }
 caption     { background: #eee; }
