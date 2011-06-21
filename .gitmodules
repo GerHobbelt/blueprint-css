@@ -1,0 +1,6 @@
+[submodule "blueprint/plugins/liquid"]
+	path = blueprint/plugins/liquid
+	url = git://github.com/Montoya/blueprint-plugin---liquidgrid.git
+[submodule "blueprint/plugins/tabs"]
+	path = blueprint/plugins/tabs
+	url = git://github.com/Montoya/blueprint-plugin---tabs.git

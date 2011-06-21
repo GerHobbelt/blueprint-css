@@ -11,6 +11,12 @@
 
 -------------------------------------------------------------- */
 
+/* Minimal padding to prevent text from hitting the edge of the 
+browser when the window size is below the .container width */
+body {
+  padding: 0 1.5em;
+}
+
 /* A container should group all your columns. */
 .container {
   width: 950px;
@@ -19,7 +25,7 @@
 
 /* Use this class on any .span / container to see the grid. */
 .showgrid {
-  background: url(src/grid.png);
+  background: url(src/grid.png) !important;
 }
 
 
@@ -221,6 +227,9 @@ next column, or to pull it into the previous column.  */
 .push-24 { margin: 0 -960px 1.5em 960px; }
 
 .push-1, .push-2, .push-3, .push-4, .push-5, .push-6, .push-7, .push-8, .push-9, .push-10, .push-11, .push-12, .push-13, .push-14, .push-15, .push-16, .push-17, .push-18, .push-19, .push-20, .push-21, .push-22, .push-23, .push-24 {float: left; position:relative;}
+
+/* Use to pull an element up by one line */
+.pull-up { margin-top: -1.5em; }
 
 
 /* Misc classes and elements

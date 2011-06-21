@@ -214,7 +214,7 @@ module Blueprint
             end
 
             unless File.directory?(File.join(File.dirname(file), short_path)) || cp == file
-              FileUtils.cp(cp, File.join(destination_path, short_path))
+              FileUtils.cp(cp, File.join(destination_path, short_path)) unless cp !=~ /.*\/(screen|print|ie)\.css$/
             end
           end
         end

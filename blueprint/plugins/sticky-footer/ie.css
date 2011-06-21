@@ -1,0 +1,9 @@
+/* --------------------------------------------------------------
+
+   sticky-footer.css
+   * implement sticky footer effects (patch for IE only)
+
+   See the Readme file in this folder for additional instructions.
+
+-------------------------------------------------------------- */
+#wrap {display:table;height:100%}

@@ -29,7 +29,9 @@ hgroup, nav, section {
 
 /* This helps to make newer HTML5 elements behave like DIVs in older browers */
 article, aside, details, figcaption, figure, dialog,
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, nav, section,
+/* Fix additional pixels in Safari (WebKit in general?) */
+img, video {
     display:block;
 }
 
@@ -43,6 +45,7 @@ body {
 table {
   border-collapse: separate;
   border-spacing: 0;
+  font-size: inherit;
 }
 /* float:none prevents the span-x classes from breaking table-cell display */
 caption, th, td {
@@ -51,7 +54,7 @@ caption, th, td {
   float:none !important;
 }
 table, th, td {
-  vertical-align: middle;
+  vertical-align: bottom;
 }
 
 /* Remove possible quote marks (") from <q>, <blockquote>. */

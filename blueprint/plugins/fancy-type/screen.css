@@ -65,7 +65,7 @@ p.incr, .incr p {
   letter-spacing: 1px;
   text-transform: lowercase;
   font-size:1.2em;
-  line-height:1%;
+  line-height:100%;
   font-weight:bold;
   padding:0 2px;
 }
