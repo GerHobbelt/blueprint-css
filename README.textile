@@ -39,8 +39,6 @@ When you want to run the ruby scripts yourself, you'll need to run these to inst
 # make sure you've got @qmake@ and the QT4 libraries (and developemnt headers!) on your system (those are required by capybara-webkit, which is a dependency itself)
 # @gem install bundler@
 # @bundle install@
-# 
-
 
 h2. Tutorials
 
