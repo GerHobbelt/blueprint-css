@@ -32,6 +32,16 @@ Remember to include trailing slashes (" />") in these lines if you're using XHTM
 # For development, add the .showgrid class to any container or column to see the underlying grid. Check out the @plugins@ directory for more advanced functionality.
 
 
+When you want to run the ruby scripts yourself, you'll need to run these to install the required gems on yours system:
+
+# ensure you've got rubygems installed, e.g. by running (as admin/root) @apt-get install rubygems@
+# ensure you've got rake installed, e.g. by running @apt-get install rake@ or @gem install rake@
+# make sure you've got @qmake@ and the QT4 libraries (and developemnt headers!) on your system (those are required by capybara-webkit, which is a dependency itself)
+# @gem install bundler@
+# @bundle install@
+# 
+
+
 h2. Tutorials
 
 * "How to customize BP with the compressor script":http://jdclayton.com/blueprints_compress_a_walkthrough.html
@@ -75,6 +85,7 @@ Other:
 Contains additional functionality in the form of simple plugins for Blueprint. See individual readme files in the directory of each plugin for further instructions.
 * @tests/@<br/>
 Contains html files which tests most aspects of Blueprint. Open @tests/index.html@ for further instructions.
+
 
 h2. Extra Information
 

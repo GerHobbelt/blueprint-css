@@ -7,3 +7,4 @@
 tmp/*
 lib/settings.yml
 capybara-*
+lib/tmp
