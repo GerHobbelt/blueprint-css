@@ -22,8 +22,10 @@ hgroup, nav, section {
   margin: 0;
   padding: 0;
   border: 0;
+  font-weight: inherit;
+  font-style: inherit;
   font-size: 100%;
-  font: inherit;
+  font-family: inherit;
   vertical-align: baseline;
 }
 
