@@ -26,6 +26,7 @@ module Blueprint
       height_in_inches = (height.to_f/RVG::dpi).in
       rvg = RVG.new(width_in_inches, height_in_inches).viewbox(0, 0, total_width, height) do |canvas|
         canvas.background_fill = "white"
+      end
 
       white      = ChunkyPNG::Color.from_hex("ffffff")
       background = ChunkyPNG::Color.from_hex("e8effb")
