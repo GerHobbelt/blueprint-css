@@ -30,7 +30,18 @@ legend, #IE8#HACK { margin-top:0; margin-bottom:0; }
   add classes for each one. ".title" simply creates a large text
   field, this is purely for looks.
  */
-input[type=text], input[type=password], input[type=url], input[type=email],
+input[type="text"], input[type="password"], input[type="url"], input[type="email"]
+{
+  background-color:#fff;
+  border:1px solid #bbb;
+  color:#000;
+  font-size: 1em;
+}
+/* 
+  [i_a] 
+  separated so IE6 accepts these: simplified ie.css as we override these in base.css 
+  and would otherwise have to re-override. What a hassle that'ld be. >:-( 
+*/
 input.text, input.title,
 textarea {
   background-color:#fff;
@@ -38,14 +49,21 @@ textarea {
   color:#000;
   font-size: 1em;
 }
-input[type=text]:focus, input[type=password]:focus, input[type=url]:focus, input[type=email]:focus,
+input[type="text"]:focus, input[type="password"]:focus, input[type="url"]:focus, input[type="email"]:focus
+{
+  border-color:#666;
+}
 input.text:focus, input.title:focus,
 textarea:focus {
   border-color:#666;
 }
 select { background-color:#fff; border-width:1px; border-style:solid; }
 
-input[type=text], input[type=password], input[type=url], input[type=email],
+input[type="text"], input[type="password"], input[type="url"], input[type="email"]
+{
+  margin: 0 0 1.6em;
+  padding: 0.25em;
+}
 input.text, input.title,
 textarea, select {
   margin: 0 0 1.6em;
