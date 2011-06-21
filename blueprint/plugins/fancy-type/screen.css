@@ -69,3 +69,17 @@ p.incr, .incr p {
   font-weight:bold;
   padding:0 2px;
 }
+
+
+/* taken from bluetrip.org */
+.fancy 
+{
+    color: #666666;
+    font-family: "Warnock Pro","Goudy Old Style","Palatino","Book Antiqua",Georgia,serif;
+    font-style: italic;
+    font-weight: normal;
+}
+.thin 
+{
+    font-weight: lighter;
+}
