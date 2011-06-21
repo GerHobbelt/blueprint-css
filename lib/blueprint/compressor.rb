@@ -153,7 +153,7 @@ module Blueprint
                                          :gutter_width => self.custom_layout.gutter_width,
                                          :font_size    => self.custom_layout.font_size,
                                          :output_path  => File.join(self.destination_path, "src")))
-        grid_builder.generate!
+        # grid_builder.generate!   -- [i_a] this is b0rken
       end
     end
 
