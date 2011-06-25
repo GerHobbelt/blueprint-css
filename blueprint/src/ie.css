@@ -46,7 +46,12 @@ img { -ms-interpolation-mode:bicubic; }
 -------------------------------------------------------------- */
 
 /* Makes clearfix actually work in IE */
-.clearfix, .container { display:inline-block; }
+.clearfix { display:inline-block; }
+/* and add MSIE hack to prevent MS Expression from screwing up its display due to  .container { display:inline-block; } */
+.container 
+{ 
+	display: inline-block\9;          /*:: <= IE8 */
+}
 * html .clearfix,
 * html .container { height:1%; }
 
