@@ -160,14 +160,21 @@ module Blueprint
     def append_custom_css(css, current_file_name)
       # check to see if a custom (non-default) location was used for output files
       # if custom path is used, handle custom CSS, if any
-      default_custom_css_exists = File.exist?(File.join(destination_path, "my-#{current_file_name}"))
-      return css unless self.custom_path && (default_custom_css_exists || self.custom_css[current_file_name])
+	  custom_css_default_file = File.join(destination_path, "my-#{current_file_name}")
+      default_custom_css_exists = File.exist?(custom_css_default_file)
+      #puts "      ? check for default custom styles file (#{custom_css_default_file}) ==> (#{default_custom_css_exists})\n"
+	  my_custom_css_file = self.custom_css[current_file_name]
+      #puts "      ? check for custom styles file (#{current_file_name}) ==> (#{my_custom_css_file})\n"
+      do_custom_css_processing = self.custom_path && (default_custom_css_exists || my_custom_css_file)
+      #puts "      - custom styles file processing ==> (#{do_custom_css_processing})\n"
+      return css unless do_custom_css_processing
 
       custom_css_files = self.custom_css[current_file_name] || []
       custom_css_files << "my-#{current_file_name}"
 
       custom_css_files.each do |custom_css|
         overwrite_path = File.join(destination_path, custom_css)
+        #puts "      + processing custom styles file (#{overwrite_path})\n"
         overwrite_css = if File.exists?(overwrite_path)
                           File.path_to_string(overwrite_path)
                         else
