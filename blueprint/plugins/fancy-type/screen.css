@@ -8,8 +8,21 @@
 -------------------------------------------------------------- */
 
 /* Indentation instead of line shifts for sibling paragraphs. */
-p + p { text-indent:2em; margin-top:-1.5em; }
-form p + p  { text-indent: 0; } /* Don't want this in forms. */
+/*
+It's a bloody nuisance in the layout; don't do this margin-top: negative thing! 
+
+So we restrict the basic manouver to paragraphs marked as 'fancy'.
+*/
+p.fancy + p.fancy 
+{ 
+	text-indent:2em; 
+	/* margin-top:-1.5em; */
+}
+/* Don't want this in forms. */
+form p.fancy + p.fancy  
+{ 
+	text-indent: 0; 
+} 
 
 
 /* For great looking type, use this code instead of asdf:
