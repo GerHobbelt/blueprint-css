@@ -8,3 +8,6 @@ tmp/*
 lib/settings.yml
 capybara-*
 lib/tmp
+_vti_cnf
+_vti_pvt
+
