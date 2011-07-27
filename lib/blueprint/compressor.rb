@@ -8,7 +8,7 @@ module Blueprint
                   "parts/grid.html",
                   "parts/sample.html"]
 
-    attr_accessor :namespace, :custom_css, :custom_layout, :semantic_classes, :project_name, :plugins
+    attr_accessor :namespace, :custom_css, :custom_layout, :semantic_classes, :project_name, :plugins, :custom_tests_path
     attr_reader   :custom_path, :loaded_from_settings, :destination_path, :script_name
 
     # overridden setter method for destination_path
@@ -27,7 +27,6 @@ module Blueprint
       self.namespace = ""
       self.destination_path = Blueprint::BLUEPRINT_ROOT_PATH
       self.custom_layout = CustomLayout.new
-      self.project_name = nil
       self.custom_css = {}
       self.semantic_classes = {}
       self.plugins = []
@@ -66,6 +65,8 @@ module Blueprint
               "Set a new gutter width (in pixels) for the output grid") {|gw| self.custom_layout.gutter_width = gw }
         o.on( "--column_count=COLUMN_COUNT", Integer,
               "Set a new column count for the output grid") {|cc| self.custom_layout.column_count = cc }
+        o.on( "--custom_tests_path=TESTS_OUTPUT_PATH", String,
+              "Define a different path to output generated test files to") {|test_path| self.custom_tests_path = test_path }
         #o.on("-v", "--verbose", "Turn on verbose output.") { |$verbose| }
         o.on("-h", "--help", "Show this help message.") { puts o; exit }
       end
@@ -142,22 +143,20 @@ module Blueprint
       # append semantic class names if set
       append_semantic_classes
 
-      #attempt to generate a grid.png file
-      if (grid_builder = GridBuilder.new(:column_width => self.custom_layout.column_width,
-                                         :gutter_width => self.custom_layout.gutter_width,
-                                         :output_path => File.join(self.destination_path, "src")))
-        grid_builder.generate!
-      end
+      generate_grid_png
     end
 
     def append_custom_css(css, current_file_name)
       # check to see if a custom (non-default) location was used for output files
       # if custom path is used, handle custom CSS, if any
-      return css unless self.custom_path and self.custom_css[current_file_name]
+      default_custom_css_exists = File.exist?(File.join(destination_path, "my-#{current_file_name}"))
+      return css unless self.custom_path && (default_custom_css_exists || self.custom_css[current_file_name])
 
-      self.custom_css[current_file_name].each do |custom_css|
-        overwrite_base = custom_css || "my-#{current_file_name}"
-        overwrite_path = File.join(destination_path, overwrite_base)
+      custom_css_files = self.custom_css[current_file_name] || []
+      custom_css_files << "my-#{current_file_name}"
+
+      custom_css_files.each do |custom_css|
+        overwrite_path = File.join(destination_path, custom_css)
         overwrite_css = if File.exists?(overwrite_path)
                           File.path_to_string(overwrite_path)
                         else
@@ -167,7 +166,7 @@ module Blueprint
         # if there's CSS present, add it to the CSS output
         unless overwrite_css.blank?
           puts "      + custom styles (#{custom_css})\n"
-          css += "/* #{overwrite_base} */\n"
+          css += "/* #{custom_css} */\n"
           css += CSSParser.new(overwrite_css).to_s + "\n"
         end
       end
@@ -229,13 +228,19 @@ module Blueprint
     def generate_tests
       puts "\n    Updating namespace to \"#{namespace}\" in test files:"
       test_files = Compressor::TEST_FILES.map do |file|
-        File.join(Blueprint::TEST_PATH, *file.split(/\//))
+        File.join(self.custom_tests_path || Blueprint::TEST_PATH, *file.split(/\//))
       end
 
       test_files.each do |file|
         puts "      + #{file}"
         Namespace.new(file, namespace)
       end
+    end
+
+    def generate_grid_png
+      GridBuilder.new(:column_width => self.custom_layout.column_width,
+                      :gutter_width => self.custom_layout.gutter_width,
+                      :output_path  => File.join(self.destination_path, "src")).generate!
     end
 
     def output_header
@@ -272,7 +277,7 @@ module Blueprint
 %(/* -----------------------------------------------------------------------
 
 
- Blueprint CSS Framework 1.0
+ Blueprint CSS Framework 1.0.1
  http://blueprintcss.org
 
    * Copyright (c) 2007-Present. See LICENSE for more info.

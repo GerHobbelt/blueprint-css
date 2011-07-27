@@ -1,7 +1,22 @@
+require "rubygems"
+
+begin
+  require "bundler"
+  Bundler.require(:default)
+rescue LoadError
+  puts "Bundler is required to run the compression script\n\n"
+  puts "    gem install bundler"
+  exit(1)
+rescue Bundler::GemNotFound
+  puts "You need to bundle in order to run the compression script\n\n"
+  puts "    bundle install --without test\n\n"
+  exit(1)
+end
+
 require 'fileutils'
 module Blueprint
   # path to the root Blueprint directory
-  ROOT_PATH =             File.join(File.expand_path(File.dirname(__FILE__)), "../../")
+  ROOT_PATH =             File.join(File.expand_path(File.dirname(__FILE__)), "..", "..")
   # path to where the Blueprint CSS files are stored
   BLUEPRINT_ROOT_PATH =   File.join(Blueprint::ROOT_PATH, "blueprint")
   # path to where the Blueprint CSS raw CSS files are stored

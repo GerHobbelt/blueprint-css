@@ -15,8 +15,9 @@ body a.noicon {
 }
 
 /* Make sure the icons are not cut */
-a[href^="http:"], a[href^="https:"], a[href^="mailto:"],
-a[href^="http:"]:visited, a[href$=".pdf"], a[href$=".doc"], a[href$=".xls"],
+a[href^="http:"], a[href^="https:"],
+a[href^="http:"]:visited, a[href^="https:"]:visited,
+a[href^="mailto:"], a[href$=".pdf"], a[href$=".doc"], a[href$=".xls"],
 a[href$=".rss"], a[href$=".rdf"], a[href^="aim:"] {
   padding:2px 22px 2px 0;
   margin:-2px 0;
