@@ -8,3 +8,4 @@ lib/settings.yml
 .settings
 .metadata
 .tmp_*
+lib/settings.yml
