@@ -103,7 +103,16 @@ form.inline p {margin-bottom:0;}
 .notice a {color:#514721;}
 .success a {color:#264409;}
 .info a {color:#205791;}
+.error, .alert {background:#fbe3e4 url('ico/cross.png') 12px 10px no-repeat;}
+.notice {background:#fff6bf url('ico/lightbulb.png') 12px 10px no-repeat;}
+.success {background:#e6efc2 url('ico/accept.png') 12px 10px no-repeat;}
+.info {background:#d5edf8 url('ico/exclamation.png') 12px 10px no-repeat;}
 td.label {width:120px;}
+.align-top {vertical-align:top;}
+.nolink {text-decoration:none;color:black;}
+.nolink:hover {color:#06c;}
+.center {text-align:center;}
+.highlight-rows tr:hover td {background-color:#76A9FF !important;color:#fff;text-shadow:0px 1px 0px #555;cursor:pointer;}
 
 /* grid.css */
 .container {width:950px;margin:0 auto;}
@@ -265,9 +274,3 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 .clearfix:after, .container:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
 .clearfix, .container {display:block;}
 .clear {clear:both;}
-
-/* feedback */
-.error, .alert {background:#fbe3e4 url('ico/cross.png') 12px 10px no-repeat;}
-.notice {background:#fff6bf url('ico/lightbulb.png') 12px 10px no-repeat;}
-.success {background:#e6efc2 url('ico/accept.png') 12px 10px no-repeat;}
-.info {background:#d5edf8 url('ico/exclamation.png') 12px 10px no-repeat;}
