@@ -106,20 +106,11 @@ form.inline p { margin-bottom:0; }
 
 /* Forms in tables */
 td.label {
-	width: 120px;
+	width: 140px;
 }
 
 .align-top {
 	vertical-align: top;
-}
-
-.nolink {
-	text-decoration: none;
-	color: black;
-}
-
-.nolink:hover {
-	color: #06c;
 }
 
 .center {
@@ -130,6 +121,21 @@ td.label {
 	background-color: #76A9FF !important;
 	color: #fff;
 	text-shadow: 0px 1px 0px #555;
+}
+
+.highlight-rows tr:hover td a {
+	color: #fff;
+	text-shadow: 0px 1px 0px #555;
 	cursor: pointer;
+}
+
+.highlight-rows tr td a {
+	text-decoration: none;
+	color: black;
+}
+
+.highlight-rows tr td a:hover {
+	color: #fff;
+	text-shadow: 0px 1px 0px #555;
 }
 
