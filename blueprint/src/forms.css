@@ -117,6 +117,7 @@ td.label {
 	text-align: center;
 }
 
+/* Highlight rows on mouseover for use with extensive data tables */
 .highlight-rows tr:hover td {
 	background-color: #76A9FF !important;
 	color: #fff;
@@ -138,4 +139,3 @@ td.label {
 	color: #fff;
 	text-shadow: 0px 1px 0px #555;
 }
-
