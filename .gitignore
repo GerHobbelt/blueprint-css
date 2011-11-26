@@ -10,4 +10,9 @@ capybara-*
 lib/tmp
 _vti_cnf
 _vti_pvt
+.project
+.buildpath
+.settings
+.metadata
+.tmp_*
 

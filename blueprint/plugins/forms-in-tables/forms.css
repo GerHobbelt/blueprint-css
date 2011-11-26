@@ -1,0 +1,43 @@
+/* Forms in tables */
+
+table.form tbody tr:nth-child(even) td,
+table.form tbody tr.even td {
+	background: transparent; 
+}
+
+td.label {
+	width: 140px;
+}
+
+.align-top {
+	vertical-align: top;
+}
+
+/*
+.center {
+	text-align: center;
+}
+*/
+
+/* Highlight rows on mouseover for use with extensive data tables */
+.highlight-rows tr:hover td {
+	background-color: #76A9FF !important;
+	color: #fff;
+	text-shadow: 0px 1px 0px #555;
+}
+
+.highlight-rows tr:hover td a {
+	color: #fff;
+	text-shadow: 0px 1px 0px #555;
+	cursor: pointer;
+}
+
+.highlight-rows tr td a {
+	text-decoration: none;
+	color: black;
+}
+
+.highlight-rows tr td a:hover {
+	color: #fff;
+	text-shadow: 0px 1px 0px #555;
+}
