@@ -85,13 +85,10 @@ fieldset {padding:1.5em 1em;margin:0 0 1.5em 0;border:1px solid #ccc;}
 legend {font-weight:bold;font-size:1.2em;margin-top:-0.2em;margin-bottom:1em;}
 fieldset, #IE8#HACK {padding-top:1.5em;}
 legend, #IE8#HACK {margin-top:0;margin-bottom:0;}
-input[type="text"], input[type="password"], input[type="url"], input[type="email"] {background-color:#fff;border:1px solid #bbb;color:#000;font-size:1em;}
-input.text, input.title, textarea {background-color:#fff;border:1px solid #bbb;color:#000;font-size:1em;}
-input[type="text"]:focus, input[type="password"]:focus, input[type="url"]:focus, input[type="email"]:focus {border-color:#666;}
-input.text:focus, input.title:focus, textarea:focus {border-color:#666;}
+input[type=text], input[type=password], input[type=url], input[type=email], input[type=number], input.text, input.title, textarea {background-color:#fff;border:1px solid #bbb;color:#000;}
+input[type=text]:focus, input[type=password]:focus, input[type=url]:focus, input[type=email]:focus, input[type=number]:focus, input.text:focus, input.title:focus, textarea:focus {border-color:#666;}
 select {background-color:#fff;border-width:1px;border-style:solid;}
-input[type="text"], input[type="password"], input[type="url"], input[type="email"] {margin:0 0 1.6em;padding:0.25em;}
-input.text, input.title, textarea, select {margin:0 0 1.6em;padding:0.25em;}
+input[type=text], input[type=password], input[type=url], input[type=email], input[type=number], input.text, input.title, textarea, select {margin:0.5em 0;}
 input.text, input.title {padding:5px;}
 input.title {font-size:1.5em;}
 textarea {height:250px;padding:5px;}
@@ -278,5 +275,3 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 .clearfix:after, .container:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
 .clearfix, .container {display:block;}
 .clear {clear:both;}
-
-/* feedback-icons */
