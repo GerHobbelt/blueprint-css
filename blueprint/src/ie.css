@@ -70,7 +70,7 @@ textarea { overflow:auto; }
 label 
 { 
 	vertical-align:middle; 
-	/* position:relative;     -- this screws up the Fx.hide in IE7/IE6 */
+	position:relative;     /* this screws up the Fx.hide in IE7/IE6 */
 	top:-0.25em; 
 }
 
@@ -98,6 +98,6 @@ form.inline input.button, form.inline button
 }
 button, input.button 
 { 
-	/* position:relative;     -- this screws up the Fx.hide in IE7/IE6 */
+	position:relative;     /* this screws up the Fx.hide in IE7/IE6 */
 	top:0.25em; 
 }
