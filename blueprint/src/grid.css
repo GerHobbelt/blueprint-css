@@ -180,6 +180,13 @@ input.span-24, textarea.span-24 { width: 938px; }
   border-right: 1px solid #ddd;
 }
 
+/* Border column on left-hand side of a .span-XX column, spans one column. */
+.colborderleft {
+  padding-left: 20px;
+  margin-left: 19px;
+  border-left: 1px solid #ddd;
+}
+
 
 /* Use these classes on an element to push it into the
 next column, or to pull it into the previous column.  */
