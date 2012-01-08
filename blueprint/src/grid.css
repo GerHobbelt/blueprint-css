@@ -28,10 +28,10 @@ body {
 Use .showgrid when you want the grid to aid you in measuring items/pixels, 
 .showgrid-basic is used to show a basic 40px square grid. */
 .showgrid {
-  background: url(src/grid10.png) !important;
+  background: url(grid10.png) !important;
 }
 .showgrid-basic {
-  background: url(src/grid.png) !important;
+  background: url(grid.png) !important;
 }
 
 
