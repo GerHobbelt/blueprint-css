@@ -7,8 +7,8 @@
 }
 
 /* Feedback Plugin */
-.error, .alert { background: #fbe3e4 url('ico/reject.png') 12px 10px no-repeat; }
-.notice        { background: #fff6bf url('ico/lightbulb.png') 12px 10px no-repeat; }
-.success       { background: #e6efc2 url('ico/accept.png') 12px 10px no-repeat; }
-.info          { background: #d5edf8 url('ico/exclamation.png') 12px 10px no-repeat; }
+.error, .alert { background: #fbe3e4 url('icons/reject.png') 12px 10px no-repeat; }
+.notice        { background: #fff6bf url('icons/lightbulb.png') 12px 10px no-repeat; }
+.success       { background: #e6efc2 url('icons/accept.png') 12px 10px no-repeat; }
+.info          { background: #d5edf8 url('icons/exclamation.png') 12px 10px no-repeat; }
 
