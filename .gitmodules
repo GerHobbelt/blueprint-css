@@ -8,3 +8,6 @@
 	path = blueprint/plugins/silksprite
 	url = git@github.com:GerHobbelt/blueprint-plugin---silksprite.git
 
+[submodule "contrib/packager"]
+	path = contrib/packager
+	url = git@github.com:GerHobbelt/packager.git
