@@ -6,6 +6,7 @@
 */
 
 require dirname(__FILE__) . '/packager/packager.php';
+require dirname(__FILE__) . '/lessphp/lessc.inc.php';
 
 $executable = array_shift($argv);
 $command = array_shift($argv);

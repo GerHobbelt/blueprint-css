@@ -11,3 +11,6 @@
 [submodule "contrib/packager"]
 	path = contrib/packager
 	url = git@github.com:GerHobbelt/packager.git
+[submodule "contrib/lessphp"]
+	path = contrib/lessphp
+	url = git@github.com:GerHobbelt/lessphp.git
